@@ -70,6 +70,15 @@ class LinkedList
     end
     node_idx
   end
+
+  def to_s
+    node = @head
+    until node.nil?
+      print "( #{node.data} ) -> "
+      node = node.next
+    end
+    print "nil\n"
+  end
 end
 
 class Node
