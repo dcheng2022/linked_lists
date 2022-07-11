@@ -48,6 +48,16 @@ class LinkedList
     @tail = node
     @tail.next = nil
   end
+
+  def contains?(data)
+    node = @head
+    until node.data == data
+      return false if node.next.nil?
+
+      node = node.next
+    end
+    true
+  end
 end
 
 class Node
