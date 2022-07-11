@@ -30,6 +30,17 @@ class LinkedList
     end
     number_of_nodes
   end
+
+  def at(index)
+    node = @head
+    node_idx = 0
+    until node_idx == index
+      node = node.next
+      node_idx += 1
+      break if node.nil?
+    end
+    node
+  end
 end
 
 class Node
