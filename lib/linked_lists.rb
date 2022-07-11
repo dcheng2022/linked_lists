@@ -91,6 +91,17 @@ class LinkedList
     new_node.next = node.next
     node.next = new_node
   end
+
+  def remove_at(index)
+    node = @head
+    node_idx = 0
+    until node_idx == index - 1
+      node = node.next
+      node_idx += 1
+    end
+    node.next.data = nil
+    node.next = node.next.next
+  end
 end
 
 class Node
