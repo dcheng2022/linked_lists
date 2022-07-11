@@ -79,6 +79,18 @@ class LinkedList
     end
     print "nil\n"
   end
+
+  def insert_at(data, index)
+    node = @head
+    node_idx = 0
+    until node_idx == index - 1
+      node = node.next
+      node_idx += 1
+    end
+    new_node = Node.new(data)
+    new_node.next = node.next
+    node.next = new_node
+  end
 end
 
 class Node
