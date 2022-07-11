@@ -41,6 +41,13 @@ class LinkedList
     end
     node.data
   end
+
+  def pop
+    node = @head
+    node = node.next until node.next == @tail
+    @tail = node
+    @tail.next = nil
+  end
 end
 
 class Node
