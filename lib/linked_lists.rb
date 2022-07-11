@@ -39,7 +39,7 @@ class LinkedList
       node_idx += 1
       break if node.nil?
     end
-    node
+    node.data
   end
 end
 
